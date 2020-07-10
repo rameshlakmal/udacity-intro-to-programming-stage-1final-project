@@ -1,0 +1,245 @@
+body{
+  background: rgb(120, 120, 120);
+}
+.image{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  background: rgb(120, 120, 120);
+  position: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+}
+.list{
+  padding-bottom: 50px;
+
+}
+
+}
+.list ul{
+  position: relative;
+
+}
+.list ul li{
+  position: relative;
+  left: 0;
+  color: #999;
+  list-style: none;
+  margin: 4px 0;
+  border-left: 10px solid rgb(255, 165, 0);
+  transition: 0.5s;
+  cursor: pointer;
+  display: inline-block;
+
+
+}
+.list ul li::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(44, 40, 107);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+
+}
+.list ul li:hover::before{
+  transform: scaleX(1);
+
+}
+.list ul li:hover{
+  left: 10px;
+}
+
+
+
+.list ul li a{
+  position: relative;
+  padding: 40px;
+  display: inline-block;;
+  z-index: 1;
+  transition: 0.5s;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: arial;
+  color: black;
+  font-family: 'Passion One', cursive;
+  font-size: 33px;
+
+
+}
+.list ul li:hover a{
+  color: orange;
+}
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  transform-style: preserve-3d;
+
+}
+.container .box{
+  position: relative;
+  width: 450px;
+  height: 300px;
+  margin: 60px 0;
+  background: #000;
+  background: #000;
+  transform-style: preserve-3d;
+}
+
+.container .box:hover{
+  box-shadow: 0 50px 80px rgba(0,0,0,.2);
+}
+.container .box .imgBx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .contentBx{
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  right: 50px;
+  background: rgb(44, 40, 107);
+  transform: translateZ(20px) scaleY(0);
+  padding: 40px 25px;
+  transform-origin: top;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  color: white;
+}
+.container .box:hover .contentBx{
+    transform: translateZ(20px) scaleY(1);
+}
+h2{
+  background: orange;
+  color: black;
+  font-family: 'Do Hyeon', sans-serif;
+}
+p{
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+}
+.flipcard{
+  padding-top: 50px;
+  margin-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: rgb(44, 40, 107);
+}
+.card{
+  position: relative;
+  margin: 20px 0;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  transition: 1s;
+  box-shadow: inset 300px 0 50px rgba(0,0,0,.5);
+  color: orange;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+.card:hover{
+  z-index: 1000;
+  transform: perspective(2000px) rotate(-10deg);
+  box-shadow: inset 300px 0 50px rgb(0,0,0);
+}
+.card .imgbox{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  transform-origin: left;
+  z-index: 1;
+  transition: 1s;
+}
+.card:hover .imgbox{
+  transform: rotateY(-135deg);
+}
+.card .imgbox .img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .details{
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.social{
+  height: 250px;
+  width: 1500px;
+  background: orange;
+}
+.social .one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  position: 2400px;
+  top: 50%;
+  left: 50%;
+
+}
+.social .one .a{
+  list-style: none;
+}
+.social .one .a {
+  width: 80px;
+  height: 80px;
+  background: orange;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid rgb(44, 40, 107);
+  z-index: 1;
+}
+.social .one .a .fa{
+  position: relative;
+  color: rgb(44, 40, 107);
+  transition: .5s;
+
+}
+.social .one .a:hover .fa{
+  color: #fff;
+  transform: rotateY(360deg);
+
+}
+.social .one .a:before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: rgb(44, 40, 107);
+  transition: .5s;
+  z-index: 2;
+}
+.social .one .a:hover:before{
+  top: 0;
+}
